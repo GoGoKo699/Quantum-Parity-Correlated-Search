@@ -9,8 +9,8 @@ For $`\kappa\ge0`$, apply diffusion after every search query. For $`\kappa \lt 0
 In a proper segment of length $`r`$, the activation signs are independent and fair. Let $`d_j`$ indicate that the diffuser is applied, and set $`a_j=s_j`$ when $`d_j=1`$ and $`a_j=-s_j`$ otherwise. For the affine update
 
 ```math
-c\longmapsto Ac+B,qquad
-A=\prod_{j=1}^r a_j,qquad
+c\longmapsto Ac+B,\qquad
+A=\prod_{j=1}^r a_j,\qquad
 B=d_r+\sum_{j=1}^{r-1}d_j\prod_{\ell=j+1}^r a_\ell,
 ```
 

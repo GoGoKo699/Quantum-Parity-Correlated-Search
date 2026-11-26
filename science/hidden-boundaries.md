@@ -2,7 +2,7 @@
 
 The search phase of a trial takes $`tL`$ consecutive calls, with $`t`$ chosen as in the [aligned construction](construction.md#fixed-budgets-and-phase-only-certification). If it starts at a block boundary there are $`t`$ full blocks. Otherwise there are $`k=t-1`$ full blocks bracketed by two nonempty partial blocks. The offset may be arbitrary and is fixed throughout the algorithm.
 
-For $`\kappa\ge0`$, apply diffusion after every search query. For $`\kappa<0`$, choose uniformly from two distinct residues modulo $`L`$ at the beginning of the trial. Omit diffusion after the calls at the selected residue relative to the beginning of search. Every full block contains exactly one omission of diffusion. For each initial offset, at most one of the two choices omits the diffuser at the last slot of a full block. The other choice gives the favorable-block rotation law from the [aligned construction](construction.md#an-aligned-block-becomes-a-rotation). That law uses the number of omitted diffusers and the fact that the last diffuser is present. The position of the omission before the last slot is immaterial to the independent suffix products. Call a trial's schedule valid when it leaves the last diffuser in place for full blocks. This event has probability at least $`1/2`$.
+For $`\kappa\ge0`$, apply diffusion after every search query. For $`\kappa \lt 0`$, choose uniformly from two distinct residues modulo $`L`$ at the beginning of the trial. Omit diffusion after the calls at the selected residue relative to the beginning of search. Every full block contains exactly one omission of diffusion. For each initial offset, at most one of the two choices omits the diffuser at the last slot of a full block. The other choice gives the favorable-block rotation law from the [aligned construction](construction.md#an-aligned-block-becomes-a-rotation). That law uses the number of omitted diffusers and the fact that the last diffuser is present. The position of the omission before the last slot is immaterial to the independent suffix products. Call a trial's schedule valid when it leaves the last diffuser in place for full blocks. This event has probability at least $`1/2`$.
 
 ## The two partial blocks
 
@@ -19,7 +19,7 @@ the total product and the $`r-1`$ suffix products appearing in $`B`$ are indepen
 ```math
 z\longmapsto e^{i4\theta d_r}
 (\cos 4\theta)^{\sum_{j=1}^{r-1} d_j}
-\operatorname{Re}z .
+\mathrm{Re}z .
 ```
 
 A favorable full block with a valid schedule produces $`z\mapsto e^{i4\theta}(\cos4\theta)^m z`$, with $`m=L-1`$ or $`L-2`$ as in the aligned construction.

@@ -16,7 +16,7 @@ A=\prod_{j=1}^{L}a_j,
 B=\sum_{j=1}^{L}d_j\prod_{k=j+1}^{L}a_k .
 ```
 
-On a favorable block $`A=1`$. Conditional on this event the effective signs are uniform subject to product $`+1`$. The suffix products $`\prod_{k=j+1}^{L}a_k`$ for $`1\le j<L`$ are independent fair signs. Indeed they are a bijective transform of the free suffix signs $`a_2,\ldots,a_L`$. Since $`d_L=1`$, the increment $`B`$ has distribution $`1+\sum_{r=1}^{m}\xi_r`$, where the $`\xi_r`$ are independent fair signs and $`m=L-1`$ for $`\sigma=+1`$ or $`m=L-2`$ for $`\sigma=-1`$.
+On a favorable block $`A=1`$. Conditional on this event the effective signs are uniform subject to product $`+1`$. The suffix products $`\prod_{k=j+1}^{L}a_k`$ for $`1\le j \lt L`$ are independent fair signs. Indeed they are a bijective transform of the free suffix signs $`a_2,\ldots,a_L`$. Since $`d_L=1`$, the increment $`B`$ has distribution $`1+\sum_{r=1}^{m}\xi_r`$, where the $`\xi_r`$ are independent fair signs and $`m=L-1`$ for $`\sigma=+1`$ or $`m=L-2`$ for $`\sigma=-1`$.
 
 Run $`t`$ complete blocks and measure the index. Conditional on all being favorable, their increments are independent. The characteristic function of the angle and the identity $`\sin^2 y=(1-\cos 2y)/2`$ give the exact probability
 
@@ -34,7 +34,7 @@ For $`N\ge1024`$ choose the integer
 t=\max\left\{2,\left\lfloor\min\left\{\frac{1}{16\theta},\frac{1}{2\eta}\right\}\right\rfloor\right\},
 ```
 
-taking $`1/\eta=+\infty`$ when $`\eta=0`$. If $`t=2`$, the probability of all favorable blocks is at least $`1/4`$. For $`t>2`$ the union bound gives at least $`3/4`$. The bound on $`t`$ ensures $`0\le(4t+2)\theta<\pi/2`$, and $`0<\cos4\theta\le1`$. Thus $`P_t\ge\sin^2((2t+1)\theta)\ge 16t^2/(\pi^2N)`$ using $`\sin y\ge2y/\pi`$ and $`\theta\ge N^{-1/2}`$.
+taking $`1/\eta=+\infty`$ when $`\eta=0`$. If $`t=2`$, the probability of all favorable blocks is at least $`1/4`$. For $`t \gt 2`$ the union bound gives at least $`3/4`$. The bound on $`t`$ ensures $`0\le(4t+2)\theta \lt \pi/2`$, and $`0 \lt \cos4\theta\le1`$. Thus $`P_t\ge\sin^2((2t+1)\theta)\ge 16t^2/(\pi^2N)`$ using $`\sin y\ge2y/\pi`$ and $`\theta\ge N^{-1/2}`$.
 
 For a measured candidate $`y`$, choose distinct indices $`r_1,r_2`$ other than $`y`$. For each $`r_i`$, prepare $`(|y\rangle+|r_i\rangle)/\sqrt2`$, issue one ordinary phase query, and measure in the basis formed by $`(|y\rangle+|r_i\rangle)/\sqrt2`$ and $`(|y\rangle-|r_i\rangle)/\sqrt2`$. Accept only if both outcomes are minus. A correct candidate is certified if both calls are active. A wrong candidate cannot pass because at least one test has neither operand marked. The empty input cannot pass any test. There is no known unmarked reference.
 
@@ -45,4 +45,4 @@ O\!\left(L(t+1)\left\lceil\frac{N}{t^2}\right\rceil\right)
 =O(LN/t)=O\!\left(L[\sqrt N+N\eta]\right).
 ```
 
-An independently valid linear fallback makes nine complete scans of $`[N]`$, running the two-reference test in two consecutive slots for each candidate without padding. The true target's eighteen test slots form a proper subset of every block because the associated runs have length at most two, whereas $`L\ge3`$. Their activation signs are jointly independent fair signs even if a test straddles a boundary. The chance of failing all nine tests is $`(3/4)^9<1/10`$. The fallback costs $`18N`$ calls, works for every offset, and has zero false positives. Choose whichever of the two fixed budgets is smaller. For $`3\le N<1024`$, the fallback alone suffices for the claimed asymptotic bound because $`N<32\sqrt N`$.
+An independently valid linear fallback makes nine complete scans of $`[N]`$, running the two-reference test in two consecutive slots for each candidate without padding. The true target's eighteen test slots form a proper subset of every block because the associated runs have length at most two, whereas $`L\ge3`$. Their activation signs are jointly independent fair signs even if a test straddles a boundary. The chance of failing all nine tests is $`(3/4)^9 \lt 1/10`$. The fallback costs $`18N`$ calls, works for every offset, and has zero false positives. Choose whichever of the two fixed budgets is smaller. For $`3\le N \lt 1024`$, the fallback alone suffices for the claimed asymptotic bound because $`N \lt 32\sqrt N`$.

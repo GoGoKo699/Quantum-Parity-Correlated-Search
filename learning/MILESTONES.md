@@ -222,9 +222,9 @@ These 30 milestones connect clean Grover search to the query law for parity-corr
 
 ### M18 The usable run length
 
-**Central question.** How many full blocks should a coherent trial use?
+**Central question.** How many block lengths should a coherent trial span?
 
-**Understanding target.** Compare the clean rotation scale $`\sqrt N`$ with the scale $`1/\eta`$ of a wrong-parity event, for $`\eta=1-|\kappa|`$. Interpret the limiting case $`\eta=0`$ and the floor at one block.
+**Understanding target.** Compare the clean rotation scale $`\sqrt N`$ with the scale $`1/\eta`$ of a wrong-parity event, for $`\eta=1-|\kappa|`$. Interpret the limiting case $`\eta=0`$ and the minimum of two block lengths, which leaves at least one full block at a hidden offset.
 
 **Prerequisites.** [M13](#m13-only-one-coefficient-is-left), [M17](#m17-from-random-angles-to-success).
 

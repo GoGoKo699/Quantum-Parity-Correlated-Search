@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
-      CAPTURE_REVISION: '4eb6ae8bc5bfc47e5e424c1165d1c89a62fdf38f'
+      CAPTURE_REVISION: 'dad1e68139368081a1414f66ea668cc4549b2699'
       PROBE_PAGE: 'README.md'
     steps:
       - name: Check out the validation branch and source history

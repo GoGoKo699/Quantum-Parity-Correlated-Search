@@ -1,0 +1,15 @@
+# Quantum Parity-Correlated Search
+
+> The optimal bounded-error query cost of zero-or-one-mark search when independently repeated fault blocks look like independent half omissions on every proper subset.
+
+- [Overview](README.md): question, statement, and reading routes.
+- [Model and main theorem](science/model.md): fault signs, full parity, phase and bit interfaces, assumptions, and matched classical cost.
+- [Construction](science/construction.md): signed Grover schedule, candidate verification, padding, and linear scan.
+- [Converse](science/converse.md): mean block operator, aggregate progress, adaptive controls, and the partial-block charge.
+- [Hidden boundaries](science/hidden-boundaries.md): arbitrary fixed offset and the stationary mixture over offsets.
+- [Interpretation](science/interpretation.md): low-order marginals, the block-length penalty, and resource scope.
+- [Related work](references/RELATED_WORK.md): inherited ingredients and differences in access models.
+- [Childs bridge](learning/CHILDS_BRIDGE.md) and [milestones](learning/MILESTONES.md): one source-to-project learning route.
+- [Verification](verification/README.md): finite reproduction commands and their scope.
+
+Keep the preferred-parity error probability, which is half the independent-block mixture weight, distinct from the marginal omission probability, which is always one half. The theorem concerns physical calls in the stated clock and oracle model. It applies to a fixed hidden offset and supplied block length. Every proper block marginal is independent, while the joint law of all calls can carry the parity bias.

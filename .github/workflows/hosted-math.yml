@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
-      CAPTURE_REVISION: 'ea551d54590c4d94476b93807a9a5c90efff12e6'
+      CAPTURE_REVISION: '4eb6ae8bc5bfc47e5e424c1165d1c89a62fdf38f'
       PROBE_PAGE: 'README.md'
     steps:
       - name: Check out the validation branch and source history
@@ -62,6 +62,7 @@ jobs:
             --root "$GITHUB_WORKSPACE"
             --repository "$GITHUB_REPOSITORY"
             --revision "$CAPTURE_REVISION"
+            --contract "$GITHUB_WORKSPACE/verification/hosted_math/math-contract.json"
           )
           if "${capture[@]}" --output "$RUNNER_TEMP/hosted-math"; then
             exit 0

@@ -25,7 +25,7 @@ The two terms have orthogonal ranges at the final slot. Suppress the mark subscr
 The potential gain is
 
 ```math
-H^+-H=2\operatorname{Re}\langle\psi,(I-K)\phi\rangle-\Delta .
+H^+-H=2\mathrm{Re}\langle\psi,(I-K)\phi\rangle-\Delta .
 ```
 
 Using $`(I-P_L\cdots P_1)\phi=\sum_j f_j`$, complete the square for every $`j\ge2`$. Its combined contribution is at most $`\|Q_j\psi\|^2`$. The magnitude of the remaining overlap is bounded by $`A_x\|Q_1\phi_x\|`$, where $`A_x=\|Q_1\psi\|+\|Q_L\psi\|`$. This uses the range of each end projection and contractivity of their product. We have $`\sum_x A_x^2\le4`$ and $`\sum_x\|Q_j\psi\|^2\le1`$.
@@ -36,7 +36,7 @@ For the aggregate $`S=\sum_x H_x`$, use $`\|Q_1\phi_x\|\le\|Q_1\psi\|+\sqrt{H_x}
 S^+-S\le (L-1)+4(1+\sqrt S).
 ```
 
-Alternatively complete the square for the remaining overlap against the $`(1-\kappa^2)\|Q_1\phi_x\|^2`$ loss. If $`|\kappa|<1`$, this gives
+Alternatively complete the square for the remaining overlap against the $`(1-\kappa^2)\|Q_1\phi_x\|^2`$ loss. If $`|\kappa| \lt 1`$, this gives
 
 ```math
 S^+-S\le (L-1)+\frac{4}{1-\kappa^2}.
@@ -44,9 +44,9 @@ S^+-S\le (L-1)+\frac{4}{1-\kappa^2}.
 
 ## Partial blocks and terminal progress
 
-A proper segment of a new block has fair independent signs. If the circuit uses $`r<L`$ slots of that block, its average interaction-frame operator is just $`P_r\cdots P_1`$. The same telescoping argument bounds its aggregate gain by $`r`$, since each loss $`\|f_j\|^2`$ pays for its overlap. This applies to a final incomplete block and any first partial block. Such intervals are independent of the other blocks. If all calls fall in a single partial block there is just one interval.
+A proper segment of a new block has fair independent signs. If the circuit uses $`r \lt L`$ slots of that block, its average interaction-frame operator is just $`P_r\cdots P_1`$. The same telescoping argument bounds its aggregate gain by $`r`$, since each loss $`\|f_j\|^2`$ pays for its overlap. This applies to a final incomplete block and any first partial block. Such intervals are independent of the other blocks. If all calls fall in a single partial block there is just one interval.
 
-Let $`T`$ be the number of calls and $`B\le T/L`$ the number of complete blocks. Starting from $`S=0`$, let $`M`$ be the largest potential at any processed interval endpoint. Summing the first gain bound up to an endpoint attaining $`M`$ gives $`M\le C(T+B\sqrt M)`$ for an absolute constant $`C`$. Moving half of $`M`$ to the left by the elementary quadratic inequality for $`B\sqrt M`$ yields $`M=O(T+B^2)`$. The second gain bound also gives $`S=O(T+B/\eta)`$ when $`\eta=1-|\kappa|>0`$, using $`1-\kappa^2\ge\eta`$.
+Let $`T`$ be the number of calls and $`B\le T/L`$ the number of complete blocks. Starting from $`S=0`$, let $`M`$ be the largest potential at any processed interval endpoint. Summing the first gain bound up to an endpoint attaining $`M`$ gives $`M\le C(T+B\sqrt M)`$ for an absolute constant $`C`$. Moving half of $`M`$ to the left by the elementary quadratic inequality for $`B\sqrt M`$ yields $`M=O(T+B^2)`$. The second gain bound also gives $`S=O(T+B/\eta)`$ when $`\eta=1-|\kappa| \gt 0`$, using $`1-\kappa^2\ge\eta`$.
 
 At the end, the probability of the event `none` differs by at least $`4/5`$ between the empty input and every mark. The trace-distance bound against a pure state gives $`\langle\psi|\rho_x|\psi\rangle\le9/25`$. Since $`\rho_x\succeq|\phi_x\rangle\langle\phi_x|`$, Cauchy–Schwarz gives $`H_x\ge(1-|\langle\psi,\phi_x\rangle|)^2\ge4/25`$. Therefore $`S\ge4N/25`$.
 

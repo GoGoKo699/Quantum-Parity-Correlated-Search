@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 4,
+      "source_sha256": "2d2155cd025fcda2bed096564247bf66098dab2287ece2b8dba839ffa7d21f52",
+      "expected_text": "Q∗(N,L,η)=Θ(min{N,L(N+ηN)})."
+    }
+  ]
+}

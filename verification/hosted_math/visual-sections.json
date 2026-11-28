@@ -1,0 +1,16 @@
+{
+  "README.md": [
+    "Run the block-parity search"
+  ],
+  "science/construction.md": [
+    "An aligned block becomes a rotation",
+    "Fixed budgets and phase-only certification"
+  ],
+  "science/hidden-boundaries.md": [
+    "The two partial blocks",
+    "Independence and charged overhead"
+  ],
+  "learning/CHILDS_BRIDGE.md": [
+    "A complete length-three example"
+  ]
+}
